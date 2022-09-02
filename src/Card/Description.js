@@ -1,7 +1,7 @@
 function Description(props) {
     return (
         <div className="">
-            <h1>We connect our customers with the best, and helo them keep up-and stay open. </h1>
+            <h1>We connect our customers with the best, and help them keep up-and stay open. </h1>
             <div class="we">
                 <p><img src={props.descrImage}class="check" alt="" />
                     We connect our customers with the best.</p>

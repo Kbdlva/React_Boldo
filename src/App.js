@@ -2,6 +2,8 @@ import './App.css';
 import './index.css';
 import Description from './Card/Description';
 import Card from './Card/Card.js'
+import Comment from './Comment/Comment.js'
+import BlogCard from './BlogCards/BlogCard.js'
 import React from 'react';
 
 
@@ -91,7 +93,7 @@ function App() {
 
           <div class="right">
 
-            <Description descrImage=".\images\check.svg" descrImage2=".\images\check.svg"descrImage3=".\images\check.svg" />
+            <Description descrImage=".\images\check.svg" descrImage2=".\images\check.svg" descrImage3=".\images\check.svg" />
 
             <button class="btn btn-dark">Start now</button>
           </div>
@@ -101,20 +103,69 @@ function App() {
 
 
           <div class="left">
-           <Description descrImage=".\images\feather.svg"
-           descrImage2=".\images\star.svg"
-           descrImage3=".\images\sun.svg"
-           />
-           </div>
+            <Description descrImage=".\images\feather.svg"
+              descrImage2=".\images\star.svg"
+              descrImage3=".\images\sun.svg"
+            />
+          </div>
           <div class="right">
-            <img src=".\images\womanOnPhone_p4.png" class="woman" alt="woman"/>
-              <img src=".\images\pie_chart_p4.png" class="pie" alt="pie"/>
-              </div>
+            <img src=".\images\womanOnPhone_p4.png" class="woman" alt="woman" />
+            <img src=".\images\pie_chart_p4.png" class="pie" alt="pie" />
+          </div>
+        </div>
+
+
+        <div id="product" class="enterprise dark-them">
+          <div class="top-ent">
+            <h1>An enterprise template to ramp up your company website</h1>
+            <div class="btns">
+              <button class="btn-basic arrow"><span><img src=".\images\arrow-left.svg" className="arrowImg" alt=""/></span></button>
+              <button class="btn-basic arrow"><span><img src=".\images\arrow-right.svg" className="arrowImg" alt=""/></span></button>
             </div>
+          </div>
+
+          <div class="comments">
+
+            <Comment com="Buyer buzz partner network disruptive non-disclosure agreement business" authorPick=".\images\Albus_p5.png" name="Albus Dumbledore" status="Manager @Howarts"/>
+
+            <Comment com="Learning curve infrastucture value proposition advisor strategy user experience
+                                hepotheses investor" authorPick=".\images\Severus_p5.png" name="Severus Snape" status="Manager @Slytherin"/>       
+
+            <Comment com="Release facebook responsive web desighn businnes model canvas seed money monetization." authorPick=".\images\Albus_p5.png" name="Harry Potter" status="Team Leader @Gryffindor"/>
 
           </div>
+        </div>
+
+        <div id="help" class="help">
+                <img src=".\images\help_p6.png" alt=""/>
+                <div class="text">
+                    <h1>We connect our customers with the best, and help them keep up and syat open.</h1>
+                    <div class="questions">
+                        <p>We connect our customers with the best?</p>
+                        <hr/>
+                        <p>Android research & development rockstar?</p>
+                        <hr/>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="blog" class="blog light-them">
+                <p>Our Blog</p>
+                <h1>Value proposition accelerating product managment venture</h1>
+                <div class="pics">
+
+                  <BlogCard imgBlog=".\images\Category1_p7.png" authorPick=".\images\Harry_p5.png"/>
+                  <BlogCard imgBlog=".\images\Category2_p7.png" authorPick=".\images\Harry_p5.png"/>
+                  <BlogCard imgBlog=".\images\Category3_p7.png" authorPick=".\images\Harry_p5.png"/>
+
+                </div>
+                <button class="btn btn-basic">Load more</button>
+            </div>
+
       </div>
-      );
+    </div>
+  );
 }
 
-      export default App;
+export default App;
