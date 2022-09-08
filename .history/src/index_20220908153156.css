@@ -407,7 +407,6 @@ footer ul {
   }
 
   .services h1 {
-    
     width: 80%
   }
 }
@@ -688,7 +687,7 @@ footer ul {
   width: 70%;;
   position: absolute;
   bottom: 0;
-  transform: translateY(35%);
+  transform: translateY(20%);
   left: 25%;
 }
 

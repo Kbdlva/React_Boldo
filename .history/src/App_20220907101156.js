@@ -134,7 +134,7 @@ function App() {
                                 hepotheses investor" authorPick=".\images\Severus_p5.png" name="Severus Snape" status="Manager @Slytherin" />
 
 
-            <div className='thirdCard'>
+            <div className='3rdCard'>
               <Comment com="Release facebook responsive web desighn businnes model canvas seed money monetization." authorPick=".\images\Albus_p5.png" name="Harry Potter" status="Team Leader @Gryffindor" />
 
             </div>

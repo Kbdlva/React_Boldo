@@ -407,7 +407,6 @@ footer ul {
   }
 
   .services h1 {
-    
     width: 80%
   }
 }
@@ -684,13 +683,9 @@ footer ul {
     width: 100%;
   }
 
-.income {
-  width: 70%;;
-  position: absolute;
-  bottom: 0;
-  transform: translateY(35%);
-  left: 25%;
-}
+  .income {
+     width: 70%;;
+  }
 
   .woman {
     width: 100%;
@@ -702,7 +697,7 @@ footer ul {
     min-width: 230px;
     position: absolute;
     bottom: 0;
-    transform: translateY(-160%);
+    transform: translateY(-90%);
     right: 20%;
   }
   /* footer .leftCont{

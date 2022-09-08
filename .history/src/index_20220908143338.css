@@ -154,7 +154,7 @@ border-radius: 24px;
 .customer1, .customer2{
   min-height: 60rem;
   padding-bottom: 1rem;;
-  
+
 }
 
 .customer1 {
@@ -174,10 +174,13 @@ border-radius: 24px;
 }
 
 .customer1 .left, .customer2 .right{
+  width: 70%;
   position: relative;
 }
 .connect .we {
   margin: 3rem 0;
+  width: 90%;
+  
 }
 
 .income {
@@ -190,16 +193,12 @@ border-radius: 24px;
 .customer1 .right, .customer2 .left{
   width: 100%;
   justify-content: start;
+  padding: 0 5rem;
   align-items: flex-start;
-}
-
-.customer1 .right{
-  padding: 0 0 0 5rem;
 }
 
 .customer2 .left{
   padding: 0 5rem 0rem 0 ;
-  width: 80%;
 }
 
 .pie{
@@ -407,7 +406,6 @@ footer ul {
   }
 
   .services h1 {
-    
     width: 80%
   }
 }
@@ -663,15 +661,11 @@ footer ul {
     display: none;
   } */
 
-
-
   .hero {
     padding: 100px 0 0 0;
     display: flex;
     flex-direction: column;
   }
-
-
 }
 
 @media (max-width: 1100px) {
@@ -680,31 +674,6 @@ footer ul {
     display: none;
   }
 
-  .man {
-    width: 100%;
-  }
-
-.income {
-  width: 70%;;
-  position: absolute;
-  bottom: 0;
-  transform: translateY(35%);
-  left: 25%;
-}
-
-  .woman {
-    width: 100%;
-    min-width: 300px;
-  }
-
-  .pie {
-    width: 70%;
-    min-width: 230px;
-    position: absolute;
-    bottom: 0;
-    transform: translateY(-160%);
-    right: 20%;
-  }
   /* footer .leftCont{
     padding: 10% 0 0 0;
     
@@ -718,7 +687,6 @@ footer ul {
     padding: 0 0 0 15%;
 
   }
-
 }
 
 @media (max-width: 1180px) {

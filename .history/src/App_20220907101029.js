@@ -4,7 +4,7 @@ import Description from './Description/Description';
 import Card from './Card/Card.js'
 import Comment from './Comment/Comment.js'
 import BlogCard from './BlogCards/BlogCard.js'
-import React, { Component } from 'react';
+import React, { Component }  from 'react';
 
 
 
@@ -121,97 +121,93 @@ function App() {
           <div className="top-ent">
             <h1>An enterprise template to ramp up your company website</h1>
             <div className="btns">
-              <button className="btn-basic arrow"><span><img src=".\images\arrow-left.svg" className="arrowImg" alt="" /></span></button>
-              <button className="btn-basic arrow"><span><img src=".\images\arrow-right.svg" className="arrowImg" alt="" /></span></button>
+              <button className="btn-basic arrow"><span><img src=".\images\arrow-left.svg" className="arrowImg" alt=""/></span></button>
+              <button className="btn-basic arrow"><span><img src=".\images\arrow-right.svg" className="arrowImg" alt=""/></span></button>
             </div>
           </div>
 
           <div className="comments">
 
-            <Comment com="Buyer buzz partner network disruptive non-disclosure agreement business" authorPick=".\images\Albus_p5.png" name="Albus Dumbledore" status="Manager @Howarts" />
+            <Comment com="Buyer buzz partner network disruptive non-disclosure agreement business" authorPick=".\images\Albus_p5.png" name="Albus Dumbledore" status="Manager @Howarts"/>
 
             <Comment com="Learning curve infrastucture value proposition advisor strategy user experience
-                                hepotheses investor" authorPick=".\images\Severus_p5.png" name="Severus Snape" status="Manager @Slytherin" />
+                                hepotheses investor" authorPick=".\images\Severus_p5.png" name="Severus Snape" status="Manager @Slytherin"/>       
 
-
-            <div className='thirdCard'>
-              <Comment com="Release facebook responsive web desighn businnes model canvas seed money monetization." authorPick=".\images\Albus_p5.png" name="Harry Potter" status="Team Leader @Gryffindor" />
-
-            </div>
+            <Comment com="Release facebook responsive web desighn businnes model canvas seed money monetization." authorPick=".\images\Albus_p5.png" name="Harry Potter" status="Team Leader @Gryffindor"/>
             {/* component to hide when width is less 1100 */}
           </div>
         </div>
 
         <div id="help" className="help">
-          <img src=".\images\help_p6.png" alt="" />
-          <div className="text">
-            <h1>We connect our customers with the best, and help them keep up and syat open.</h1>
-            <div className="questions">
-              <p>We connect our customers with the best?</p>
-              <hr />
-              <p>Android research & development rockstar?</p>
-              <hr />
+                <img src=".\images\help_p6.png" alt=""/>
+                <div className="text">
+                    <h1>We connect our customers with the best, and help them keep up and syat open.</h1>
+                    <div className="questions">
+                        <p>We connect our customers with the best?</p>
+                        <hr/>
+                        <p>Android research & development rockstar?</p>
+                        <hr/>
+                    </div>
+
+                </div>
             </div>
 
-          </div>
-        </div>
+            <div id="blog" className="blog light-them">
+                <p>Our Blog</p>
+                <h1>Value proposition accelerating product managment venture</h1>
+                <div className="pics">
 
-        <div id="blog" className="blog light-them">
-          <p>Our Blog</p>
-          <h1>Value proposition accelerating product managment venture</h1>
-          <div className="pics">
+                  <BlogCard imgBlog=".\images\Category1_p7.png" authorPick=".\images\Harry_p5.png"/>
+                  <BlogCard imgBlog=".\images\Category2_p7.png" authorPick=".\images\Harry_p5.png"/>
+                  <BlogCard imgBlog=".\images\Category3_p7.png" authorPick=".\images\Harry_p5.png"/>
 
-            <BlogCard imgBlog=".\images\Category1_p7.png" authorPick=".\images\Harry_p5.png" />
-            <BlogCard imgBlog=".\images\Category2_p7.png" authorPick=".\images\Harry_p5.png" />
-            <BlogCard imgBlog=".\images\Category3_p7.png" authorPick=".\images\Harry_p5.png" />
-
-          </div>
-          <button className="btn btn-basic">Load more</button>
-        </div>
-
-        <div id="resourses" className="last dark-them">
-          <h1>An enterprise template to ramp up your company website</h1>
-          <div className="email">
-            <form>
-              <label for="email"></label>
-              <input type="email" id="email" name="email" placeholder="Your email" />
-            </form>
-            <button className="btn btn-green">Start now</button>
-          </div>
-
-
-        </div>
-
-        <footer>
-          <div className="container">
-            <div className="leftCont">
-              <img src=".\images\Logo_header_p1.png" alt="" />
-              <p className="reserved">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sed perspiciatis vitae obcaecati delectus nulla!</p>
-              <p>Allrights reserved.</p>
+                </div>
+                <button className="btn btn-basic">Load more</button>
             </div>
 
-            <div className="rightCont">
-              <ul className="lists">
-                <li><a href="#landings">Landings</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#product">Products</a></li>
-                <li><a href="#services">Services</a></li>
-              </ul>
-              <ul className="lists2">
-                <li><a href="#company">Company</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#help">Carees</a></li>
-                <li><a href="#services">Services</a></li>
-              </ul>
-              <ul className="lists3">
-                <li><a href="#resourses">Resources</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#product">Products</a></li>
-                <li><a href="#services">Services</a></li>
-              </ul>
-            </div>
-          </div>
+            <div id="resourses" className="last dark-them">
+                <h1>An enterprise template to ramp up your company website</h1>
+                <div className="email">
+                    <form>
+                        <label for="email"></label>
+                        <input type="email" id="email" name="email" placeholder="Your email"/>
+                    </form>
+                    <button className="btn btn-green">Start now</button>
+                </div>
 
+
+            </div>
+
+            <footer>
+            <div className="container">
+                <div className="leftCont">
+                    <img src=".\images\Logo_header_p1.png" alt=""/>
+                    <p className="reserved">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sed perspiciatis vitae obcaecati delectus nulla!</p>
+                    <p>Allrights reserved.</p>
+                </div>
+    
+                <div className="rightCont">
+                    <ul className="lists">
+                        <li><a href="#landings">Landings</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#product">Products</a></li>
+                        <li><a href="#services">Services</a></li>
+                    </ul>
+                    <ul className="lists2">
+                        <li><a href="#company">Company</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#help">Carees</a></li>
+                        <li><a href="#services">Services</a></li>
+                    </ul>
+                    <ul className="lists3">
+                        <li><a href="#resourses">Resources</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#product">Products</a></li>
+                        <li><a href="#services">Services</a></li>
+                    </ul>
+                </div>
+            </div>
+            
 
 
 

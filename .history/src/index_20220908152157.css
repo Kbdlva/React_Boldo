@@ -199,7 +199,6 @@ border-radius: 24px;
 
 .customer2 .left{
   padding: 0 5rem 0rem 0 ;
-  width: 80%;
 }
 
 .pie{
@@ -407,7 +406,6 @@ footer ul {
   }
 
   .services h1 {
-    
     width: 80%
   }
 }
@@ -680,17 +678,14 @@ footer ul {
     display: none;
   }
 
+
   .man {
     width: 100%;
   }
 
-.income {
-  width: 70%;;
-  position: absolute;
-  bottom: 0;
-  transform: translateY(35%);
-  left: 25%;
-}
+  .income {
+     width: 70%;;
+  }
 
   .woman {
     width: 100%;
@@ -700,10 +695,6 @@ footer ul {
   .pie {
     width: 70%;
     min-width: 230px;
-    position: absolute;
-    bottom: 0;
-    transform: translateY(-160%);
-    right: 20%;
   }
   /* footer .leftCont{
     padding: 10% 0 0 0;
