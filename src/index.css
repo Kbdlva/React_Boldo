@@ -399,17 +399,15 @@ form {
   margin-right: 1rem;;
 }
 
-
-footer {
-  display: inline-flex;
-  width: 100%;
-  
+.container {
+  display: flex;
+  flex-direction: row;
 }
 
 footer .leftCont{
   align-items: flex-start;
-  /* padding: 10rem 10rem 3rem 0; */
-  /* width: 30%; */
+  width: 40%;
+  
   color:lightgray;
 
 }
@@ -680,6 +678,27 @@ footer ul {
   }
 }
 
+@media (max-width: 986px) {
+
+
+  .inside {
+    display: none;
+  }
+
+  footer .rightCont {
+    flex-direction: column;
+    margin-left: 4rem;
+  }
+
+  footer .lists, .lists2, .lists3 {
+    margin: 0;
+    height: 40px;
+  }
+
+
+
+}
+
 @media (max-width: 1030px) {
   .logos {
     display: none;
@@ -730,23 +749,12 @@ padding-bottom: 4rem;;
   .blogCard3 {
     display: none;
   }
-
 }
-
 
 @media (max-width: 1100px) {
   footer .left{
     padding: 10% 0 0 0;
     width: 50%;
-  }
-
-  footer ul {
-    margin: 10%;
-  }
-
-  footer .right {
-    padding: 0 0 0 15%;
-
   }
 }
 
