@@ -1,10 +1,12 @@
 import './App.css';
 import './index.css';
-import Description from './Card/Description';
+import Description from './Description/Description';
 import Card from './Card/Card.js'
 import Comment from './Comment/Comment.js'
 import BlogCard from './BlogCards/BlogCard.js'
-import React from 'react';
+import React, { Component } from 'react';
+
+
 
 
 
@@ -77,91 +79,148 @@ function App() {
               featureName="Cooler"
 
             />
-            <Card
-              image=".\images\cool_f3_p2.png" alt="cool2"
-              featureName="Even cooler"
-            />
+
+            <div className="servicesCard">
+              <Card
+                image=".\images\cool_f3_p2.png" alt="cool2"
+                featureName="Even cooler"
+              />
+            </div>
+
 
           </div>
         </div>
 
-        <div id="company" class="connect customer1">
-          <div class="left">
-            <img src=".\images\manOnPhone_p3.png" class="man" alt="man" />
-            <img src=".\images\graph_income_p3.png" class="income" alt="income" />
+        <div id="company" className="connect customer1">
+          <div className="left">
+            <img src=".\images\manOnPhone_p3.png" className="man" alt="man" />
+            <img src=".\images\graph_income_p3.png" className="income" alt="income" />
           </div>
 
-          <div class="right">
+          <div className="right">
 
             <Description descrImage=".\images\check.svg" descrImage2=".\images\check.svg" descrImage3=".\images\check.svg" />
 
-            <button class="btn btn-dark">Start now</button>
+            <button className="btn btn-dark">Start now</button>
           </div>
         </div>
 
-        <div id="landings" class="connect customer2">
+        <div id="landings" className="connect customer2">
 
 
-          <div class="left">
+          <div className="left">
             <Description descrImage=".\images\feather.svg"
               descrImage2=".\images\star.svg"
               descrImage3=".\images\sun.svg"
             />
           </div>
-          <div class="right">
-            <img src=".\images\womanOnPhone_p4.png" class="woman" alt="woman" />
-            <img src=".\images\pie_chart_p4.png" class="pie" alt="pie" />
+          <div className="right">
+            <img src=".\images\womanOnPhone_p4.png" className="woman" alt="woman" />
+            <img src=".\images\pie_chart_p4.png" className="pie" alt="pie" />
           </div>
         </div>
 
 
-        <div id="product" class="enterprise dark-them">
-          <div class="top-ent">
+        <div id="product" className="enterprise dark-them">
+          <div className="top-ent">
             <h1>An enterprise template to ramp up your company website</h1>
-            <div class="btns">
-              <button class="btn-basic arrow"><span><img src=".\images\arrow-left.svg" className="arrowImg" alt=""/></span></button>
-              <button class="btn-basic arrow"><span><img src=".\images\arrow-right.svg" className="arrowImg" alt=""/></span></button>
+            <div className="btns">
+              <button className="btn-basic arrow"><span><img src=".\images\arrow-left.svg" className="arrowImg" alt="" /></span></button>
+              <button className="btn-basic arrow"><span><img src=".\images\arrow-right.svg" className="arrowImg" alt="" /></span></button>
             </div>
           </div>
 
-          <div class="comments">
+          <div className="comments">
 
-            <Comment com="Buyer buzz partner network disruptive non-disclosure agreement business" authorPick=".\images\Albus_p5.png" name="Albus Dumbledore" status="Manager @Howarts"/>
+            <Comment com="Buyer buzz partner network disruptive non-disclosure agreement business" authorPick=".\images\Albus_p5.png" name="Albus Dumbledore" status="Manager @Howarts" />
 
             <Comment com="Learning curve infrastucture value proposition advisor strategy user experience
-                                hepotheses investor" authorPick=".\images\Severus_p5.png" name="Severus Snape" status="Manager @Slytherin"/>       
+                                hepotheses investor" authorPick=".\images\Severus_p5.png" name="Severus Snape" status="Manager @Slytherin" />
+            <div className='commentNum3'>
 
-            <Comment com="Release facebook responsive web desighn businnes model canvas seed money monetization." authorPick=".\images\Albus_p5.png" name="Harry Potter" status="Team Leader @Gryffindor"/>
+              <Comment com="Release facebook responsive web desighn businnes model canvas seed money monetization." authorPick=".\images\Albus_p5.png" name="Harry Potter" status="Team Leader @Gryffindor" />
+            </div>
 
           </div>
         </div>
 
-        <div id="help" class="help">
-                <img src=".\images\help_p6.png" alt=""/>
-                <div class="text">
-                    <h1>We connect our customers with the best, and help them keep up and syat open.</h1>
-                    <div class="questions">
-                        <p>We connect our customers with the best?</p>
-                        <hr/>
-                        <p>Android research & development rockstar?</p>
-                        <hr/>
-                    </div>
-
-                </div>
+        <div id="help" className="help">
+          <img src=".\images\help_p6.png" alt="" />
+          <div className="text">
+            <h1>We connect our customers with the best, and help them keep up and syat open.</h1>
+            <div className="questions">
+              <p>We connect our customers with the best?</p>
+              <hr />
+              <p>Android research & development rockstar?</p>
+              <hr />
             </div>
 
-            <div id="blog" class="blog light-them">
-                <p>Our Blog</p>
-                <h1>Value proposition accelerating product managment venture</h1>
-                <div class="pics">
+          </div>
+        </div>
 
-                  <BlogCard imgBlog=".\images\Category1_p7.png" authorPick=".\images\Harry_p5.png"/>
-                  <BlogCard imgBlog=".\images\Category2_p7.png" authorPick=".\images\Harry_p5.png"/>
-                  <BlogCard imgBlog=".\images\Category3_p7.png" authorPick=".\images\Harry_p5.png"/>
+        <div id="blog" className="blog light-them">
+          <p>Our Blog</p>
+          <h1>Value proposition accelerating product managment venture</h1>
+          <div className="pics">
 
-                </div>
-                <button class="btn btn-basic">Load more</button>
+            <BlogCard imgBlog=".\images\Category1_p7.png" authorPick=".\images\Harry_p5.png" />
+            <BlogCard imgBlog=".\images\Category2_p7.png" authorPick=".\images\Harry_p5.png" />
+            
+            <div className='blogCard3'>
+            <BlogCard imgBlog=".\images\Category3_p7.png" authorPick=".\images\Harry_p5.png" />
             </div>
+
+          </div>
+          <button className="btn btn-basic">Load more</button>
+        </div>
+
+        <div id="resourses" className="last dark-them">
+          <h1>An enterprise template to ramp up your company website</h1>
+          <div className="email">
+            <form>
+              <label for="email"></label>
+              <input type="email" id="email" name="email" placeholder="Your email" />
+            </form>
+            <button className="btn btn-green">Start now</button>
+          </div>
+
+
+        </div>
+
+        <footer>
+          <div className="container">
+            <div className="leftCont">
+              <img src=".\images\Logo_header_p1.png" alt="" />
+              <p className="reserved">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sed perspiciatis vitae obcaecati delectus nulla!</p>
+              <p>Allrights reserved.</p>
+            </div>
+
+            <div className="rightCont">
+              <ul className="lists">
+                <li><a href="#landings">Landings</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#product">Products</a></li>
+                <li><a href="#services">Services</a></li>
+              </ul>
+              <ul className="lists2">
+                <li><a href="#company">Company</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#help">Carees</a></li>
+                <li><a href="#services">Services</a></li>
+              </ul>
+              <ul className="lists3">
+                <li><a href="#resourses">Resources</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#product">Products</a></li>
+                <li><a href="#services">Services</a></li>
+              </ul>
+            </div>
+          </div>
+
+
+
+
+        </footer>
 
       </div>
     </div>

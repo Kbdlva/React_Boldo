@@ -1,6 +1,9 @@
+import "./Card.css";
+
 function Card(props) {
     return(
-    <div>
+    <div className="card">
+
      <img src={props.image} alt={props.alt}/>
       <p>{props.featureName} feature </p>
   
