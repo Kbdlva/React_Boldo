@@ -1,13 +1,6 @@
 * {
   box-sizing: border-box;
 }
-/* 1 rem = 10px
-:root {
-  font-size: 62.5%;
-}
-html {
-  font-size: 1.6rem;
-} */
 
 body {
   margin: 0;
@@ -18,18 +11,24 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 .light-them {
   background-color: #fff;
   color: var(--dark-color);
 }
 
-.dark-them, .dark-them h1, .dark-them p{
-  background-color:#0A2640;
-  color: #fff; 
+.dark-them,
+.dark-them h1,
+.dark-them p {
+  background-color: #0A2640;
+  color: #fff;
 }
 
-.hero, .services, .connect, .enterprise, .help, .blog {
+.hero,
+.services,
+.connect,
+.enterprise,
+.help,
+.blog {
   min-height: fit-content;
 }
 
@@ -38,11 +37,30 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+  height: 40%;
   z-index: 50;
-  display: flex ;
+  padding: 1rem 8rem 1rem 8rem;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #65E4A3;
+}
+
+.header_logo {
+  z-index: 3;
+}
+
+.header_body {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  background-color:#65E4A3;
-  padding: 1rem 2rem 1rem 8rem;
+  z-index: 3;
 }
 
 .header_list {
@@ -62,10 +80,8 @@ a {
 }
 
 .hero {
-padding: 10rem 0rem 0 0;
+  padding: 10rem 0rem 0 0;
 }
-
-
 
 .top {
   width: 32vw;
@@ -87,11 +103,7 @@ padding: 10rem 0rem 0 0;
 .logos {
   margin: 60px 0;
   width: 100%;
-
 }
-
-
-
 
 .cards {
   display: flex;
@@ -103,7 +115,7 @@ padding: 10rem 0rem 0 0;
 }
 
 .btn {
-border-radius: 24px;
+  border-radius: 24px;
   padding: 10px 35px;
   font-family: var(--secondary-text);
   cursor: pointer;
@@ -112,7 +124,7 @@ border-radius: 24px;
   font-size: 1.2rem;
 }
 
-.content{
+.content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -120,21 +132,24 @@ border-radius: 24px;
 }
 
 .content .left {
-  margin-right: 3rem;;
+  margin-right: 3rem;
+  ;
 }
 
 .btn-dark {
-  background:  #0A2640;
+  background: #0A2640;
   color: #fff;
 }
+
 .btn-basic {
   background-color: #fff;
-  color:  #0A2640;
+  color: #0A2640;
   border: 2px solid #0A2640;
 }
+
 .btn-green {
   background-color: #65E4A3;
-  color:  #0A2640;
+  color: #0A2640;
 }
 
 .btn:active {
@@ -145,7 +160,7 @@ border-radius: 24px;
   margin: 0.5rem;
 }
 
-.services {  
+.services {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -159,12 +174,13 @@ border-radius: 24px;
   align-items: center;
 }
 
-.customer1, .customer2{
+.customer1,
+.customer2 {
   min-height: 50rem;
 }
 
 .customer1 {
-   padding-bottom: 0;
+  padding-bottom: 0;
 }
 
 .customer2 {
@@ -176,10 +192,12 @@ border-radius: 24px;
   align-items: center;
 }
 
-.customer1 .left, .customer2 .right{
+.customer1 .left,
+.customer2 .right {
   width: 80%;
   position: relative;
 }
+
 .connect .we {
   margin: 3rem 0;
   width: 90%;
@@ -203,25 +221,24 @@ border-radius: 24px;
   left: 25%;
 }
 
-.pie{
+.pie {
   position: absolute;
   bottom: 0;
   transform: translateY(30%);
   right: 25%;
 }
 
-
-.customer1 .right, .customer2 .left{
+.customer1 .right,
+.customer2 .left {
   width: 100%;
   justify-content: start;
-  padding: 0 0 0 5rem ;
+  padding: 0 0 0 5rem;
   align-items: flex-start;
 }
 
-.customer2 .left{
-  padding: 0 5rem 0rem 0 ;
+.customer2 .left {
+  padding: 0 5rem 0rem 0;
 }
-
 
 .check {
   width: 2rem;
@@ -233,20 +250,16 @@ border-radius: 24px;
   align-items: center;
   width: 100%;
   padding: 10px 30px;
-  box-shadow:0 0 5px rgba(0,0,0,0.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .customer1 .dark {
   color: #fff;
 }
 
-.icons{
+.icons {
   margin-right: 15px;
 }
-
-/* .dark{
-  background-color:#0A2640;
-} */
 
 .services,
 .enterprise {
@@ -263,10 +276,10 @@ border-radius: 24px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 2rem 2rem ;
+  padding: 2rem 2rem;
 }
 
-.author{
+.author {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -274,7 +287,8 @@ border-radius: 24px;
 }
 
 .person {
-  margin-left: 1rem;;
+  margin-left: 1rem;
+  ;
 }
 
 .avatar img {
@@ -282,10 +296,11 @@ border-radius: 24px;
   height: 50px;
 }
 
-.avatar p, h3 {
+.avatar p,
+h3 {
   color: #000;
   background-color: #fff;
-  font-family:  'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   margin: 0;
 }
@@ -306,7 +321,7 @@ border-radius: 24px;
   justify-content: flex-end;
 }
 
-.btns > * {
+.btns>* {
   /* aspect-ratio: 1/1; Height/Width */
   width: 3rem;
   height: 3rem;
@@ -319,7 +334,7 @@ border-radius: 24px;
 }
 
 .arrow {
-  margin: 1rem ;
+  margin: 1rem;
   border: none;
 }
 
@@ -334,7 +349,7 @@ border-radius: 24px;
   margin: 0;
 }
 
-.questions{
+.questions {
   width: 100%;
   margin-left: 5rem;
 }
@@ -353,11 +368,12 @@ border-radius: 24px;
   display: flex;
   flex-direction: row;
 }
+
 .blog {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;   
+  justify-content: center;
 }
 
 .blog h1 {
@@ -387,7 +403,6 @@ input {
 
 input::placeholder {
   font-size: 16px;
-
 }
 
 .email {
@@ -396,7 +411,8 @@ input::placeholder {
 }
 
 form {
-  margin-right: 1rem;;
+  margin-right: 1rem;
+  ;
 }
 
 .container {
@@ -404,12 +420,10 @@ form {
   flex-direction: row;
 }
 
-footer .leftCont{
+footer .leftCont {
   align-items: flex-start;
   width: 40%;
-  
-  color:lightgray;
-
+  color: lightgray;
 }
 
 footer .rightCont {
@@ -418,7 +432,6 @@ footer .rightCont {
 }
 
 footer ul li:first-child {
-
   font-weight: bold;
 }
 
@@ -433,13 +446,10 @@ footer ul {
   padding: 0;
 }
 
-
-
 @media (max-width: 550px) {
   .customer2 .we p {
     width: 90%;
   }
-
   .services h1 {
     width: 80%
   }
@@ -448,16 +458,12 @@ footer ul {
 
 @media (max-width: 767px) {
 
-.servicesCard {
-  display: none;
-}
-
-  .help img {
+  .servicesCard {
     display: none;
   }
 
-  p {
-    font-size: 130%;
+  .help img {
+    display: none;
   }
 
   .btn {
@@ -472,7 +478,6 @@ footer ul {
   }
 
   .questions {
-    
     padding: 10% 0 0 0;
     margin: 0;
   }
@@ -492,7 +497,6 @@ footer ul {
 
   form {
     margin-bottom: 1rem;
-    ;
   }
 
   .customer1 .left,
@@ -501,7 +505,6 @@ footer ul {
   }
 
   .connect {
-    /* max-height: 941px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -511,10 +514,9 @@ footer ul {
     padding: 0 0 0 0;
   }
 
-  .customer1 .right{
+  .customer1 .right {
     padding: 0 0 0 0;
-
-  } 
+  }
 
   .enterprise {
     display: none;
@@ -525,10 +527,6 @@ footer ul {
     align-items: center;
     justify-content: center;
     min-width: 100%;
-  }
-
-  .header {
-    height: 20%;
   }
 
   body.lock {
@@ -555,7 +553,6 @@ footer ul {
     width: 100%;
     height: 2px;
     top: 9px;
-
     transition: all 0.3s ease 0s;
   }
 
@@ -597,14 +594,18 @@ footer ul {
     bottom: 0;
   }
 
-  .header_menu {
+  .header_menu { 
     position: fixed;
-    top: -120%;
+    top: 0%;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: aquamarine;
-    padding: 160px 0 0 0;
+    background-color: #0A2640;
+    padding: 30px 0 0 2rem;
+  }
+
+  .header_logo {
+    visibility: hidden;
   }
 
   .header_list {
@@ -621,7 +622,7 @@ footer ul {
   }
 
   .header_list li {
-    font-size: 36px;
+    font-size: 20px;
   }
 }
 
@@ -629,11 +630,16 @@ footer ul {
   .wrapper {
     padding: 3rem 5rem 3rem 5rem;
   }
-  footer .left{
+
+  header {
+    padding: 1rem 5rem 1rem 5rem;
+  }
+
+  footer .left {
     padding: 10% 0 0 0;
     width: 50%;
   }
-  
+
   footer .right {
     display: block;
     margin: 10% 0 0 0;
@@ -653,23 +659,6 @@ footer ul {
   .inside {
     display: none;
   }
-
-  /* .customer1 .left,
-  .customer2 .right {
-    width: 70%;
-    height: fit-content;
-  }
-
-  .customer1 .left {
-    padding: 10% 0 0 0;
-  }
-
-  .customer1 .right{
-    padding: 30% 0 0 0;
-
-  }  */
-
-
 }
 
 @media (max-width: 950px) {
@@ -679,8 +668,6 @@ footer ul {
 }
 
 @media (max-width: 986px) {
-
-
   .inside {
     display: none;
   }
@@ -690,13 +677,12 @@ footer ul {
     margin-left: 4rem;
   }
 
-  footer .lists, .lists2, .lists3 {
+  footer .lists,
+  .lists2,
+  .lists3 {
     margin: 0;
     height: 40px;
   }
-
-
-
 }
 
 @media (max-width: 1030px) {
@@ -716,33 +702,34 @@ footer ul {
   }
 
   .income,
-.pie {
-  width: 60%;
-  max-width: 230px;
-}
+  .pie {
+    width: 60%;
+    max-width: 230px;
+  }
 
-.woman {
-padding-bottom: 4rem;;
-}
+  .woman {
+    padding-bottom: 4rem;
+  }
 
-.customer1 .left,
-.customer2 .right {
-  width: 70%;
-  height: fit-content;
-}
+  .customer1 .left,
+  .customer2 .right {
+    width: 70%;
+    height: fit-content;
+  }
 
-.customer1 .left {
-  padding: 10% 0 0 0;
-}
+  .customer1 .left {
+    padding: 10% 0 0 0;
+  }
 
-.customer1 .right, .customer2 .left{
-  padding: 10% 0 0 0;
-} 
+  .customer1 .right,
+  .customer2 .left {
+    padding: 10% 0 0 0;
+  }
 
-.income,
-.pie {
- display: none;
-}
+  .income,
+  .pie {
+    display: none;
+  }
 }
 
 @media (max-width: 1080px) {
@@ -752,7 +739,7 @@ padding-bottom: 4rem;;
 }
 
 @media (max-width: 1100px) {
-  footer .left{
+  footer .left {
     padding: 10% 0 0 0;
     width: 50%;
   }
@@ -760,10 +747,12 @@ padding-bottom: 4rem;;
 
 @media (max-width: 1180px) {
 
-  .customer1, .customer2 {
+  .customer1,
+  .customer2 {
     min-height: 40rem;
   }
-  footer .left{
+
+  footer .left {
     padding: 10% 0 0 0;
     width: 50%;
   }
@@ -774,11 +763,12 @@ padding-bottom: 4rem;;
 
   footer .right {
     padding: 0 0 0 15%;
-
   }
+
   .services .card3 {
     display: none;
   }
+
   .enterprise .com3 {
     display: none;
   }
@@ -788,38 +778,37 @@ padding-bottom: 4rem;;
   }
 
   .man,
-.woman {
-  width: 20rem;
+  .woman {
+    width: 20rem;
+  }
+
+  .income {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(40%);
+    left: 25%;
+  }
+
+  .pie {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(30%);
+    right: 35%;
+  }
+
+  .income,
+  .pie {
+    width: 60%;
+    min-width: 230px;
+  }
+
+  .commentNum3 {
+    display: none;
+  }
 }
 
-.income {
-  position: absolute;
-  bottom: 0;
-  transform: translateY(40%);
-  left: 25%;
-}
+@media (max-width: 1500px) {
 
-.pie{
-  position: absolute;
-  bottom: 0;
-  transform: translateY(30%);
-  right: 35%;
-}
-
-.income,
-.pie {
-  width: 60%;
-  min-width: 230px;
-}
-
-.commentNum3 {
-  display: none;
-}
-}
-
-
-@media (max-width: 1500px) { 
- 
   .services,
   .enterprise {
     padding: 10%;

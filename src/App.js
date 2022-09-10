@@ -16,25 +16,28 @@ function App() {
     <div className="App">
       <div className="wrapper">
         <header>
-          <a href="https://www.google.com/search?q=Boldo&rlz=1C1IXYC_ruKZ1008KZ1008&sxsrf=ALiCzsbXogn_ySoE_4IdSKWY0x0nfIrCwA:1660542487373&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiF8t_oksj5AhXhkYsKHe7HBV4Q_AUoAXoECAIQAw&biw=1536&bih=746&dpr=1.25#imgrc=WolQvP0DPf_LyM"
-            className="header_logo">
-            <img src=".\images\Logo_header_p1.png" className="logo" alt="logo" />
-          </a>
-          <div className="header_burger">
-            <span></span>
+          <div className='headContainer'>
+            <div className='header_body'>
+              <a href="https://www.google.com/search?q=Boldo&rlz=1C1IXYC_ruKZ1008KZ1008&sxsrf=ALiCzsbXogn_ySoE_4IdSKWY0x0nfIrCwA:1660542487373&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiF8t_oksj5AhXhkYsKHe7HBV4Q_AUoAXoECAIQAw&biw=1536&bih=746&dpr=1.25#imgrc=WolQvP0DPf_LyM"
+                className="header_logo">
+                <img src=".\images\Logo_header_p1.png" className="logo" alt="logo" />
+              </a>
+              <div className="header_burger">
+                <span></span>
+              </div>
+
+              <nav className="header_menu">
+                <ul className="header_list">
+                  <li><a href="#product" className="nav-link">Product</a></li>
+                  <li><a href="#services" className="nav-link">Services</a></li>
+                  <li><a href="#help" className="nav-link">About</a></li>
+                  <button className="btn btn-basic nav-link">
+                    Log in
+                  </button>
+                </ul>
+              </nav>
+            </div>
           </div>
-
-          <nav className="header_menu">
-            <ul className="header_list">
-              <li><a href="#product" className="nav-link">Product</a></li>
-              <li><a href="#services" className="nav-link">Services</a></li>
-              <li><a href="#help" className="nav-link">About</a></li>
-              <button className="btn btn-basic nav-link">
-                Log in
-              </button>
-            </ul>
-          </nav>
-
         </header>
 
         <div className="hero light-them">
@@ -52,14 +55,11 @@ function App() {
 
             <div className="right">
               <img src=".\images\graph_top.png" className="top" alt="Graph 1" />
-
               <div className="bottom_graphs">
                 <img src=".\images\graph_bt_left.png" className="bottom1" alt="Graph 2" />
                 <img src=".\images\graph_bt_rigth.png" className="bottom2" alt="Graph 3" />
               </div>
-
             </div>
-
           </div>
           <img src=".\images\Logos_bottom_p1.png" className="logos" alt="logos" />
         </div>
@@ -86,8 +86,6 @@ function App() {
                 featureName="Even cooler"
               />
             </div>
-
-
           </div>
         </div>
 
@@ -96,18 +94,13 @@ function App() {
             <img src=".\images\manOnPhone_p3.png" className="man" alt="man" />
             <img src=".\images\graph_income_p3.png" className="income" alt="income" />
           </div>
-
           <div className="right">
-
             <Description descrImage=".\images\check.svg" descrImage2=".\images\check.svg" descrImage3=".\images\check.svg" />
-
             <button className="btn btn-dark">Start now</button>
           </div>
         </div>
 
         <div id="landings" className="connect customer2">
-
-
           <div className="left">
             <Description descrImage=".\images\feather.svg"
               descrImage2=".\images\star.svg"
@@ -154,7 +147,6 @@ function App() {
               <p>Android research & development rockstar?</p>
               <hr />
             </div>
-
           </div>
         </div>
 
@@ -165,9 +157,9 @@ function App() {
 
             <BlogCard imgBlog=".\images\Category1_p7.png" authorPick=".\images\Harry_p5.png" />
             <BlogCard imgBlog=".\images\Category2_p7.png" authorPick=".\images\Harry_p5.png" />
-            
+
             <div className='blogCard3'>
-            <BlogCard imgBlog=".\images\Category3_p7.png" authorPick=".\images\Harry_p5.png" />
+              <BlogCard imgBlog=".\images\Category3_p7.png" authorPick=".\images\Harry_p5.png" />
             </div>
 
           </div>
@@ -183,8 +175,6 @@ function App() {
             </form>
             <button className="btn btn-green">Start now</button>
           </div>
-
-
         </div>
 
         <footer>
@@ -198,11 +188,11 @@ function App() {
             <div className="rightCont">
               <ul className="lists">
                 <li><a href="#landings">Landings</a></li>
-                
-                <li><a href="#"  className='inside' >Home</a ></li>
+
+                <li><a href="#" className='inside' >Home</a ></li>
                 <li><a href="#product" className='inside'>Products</a></li>
                 <li><a href="#services" className='inside'>Services</a></li>
-              
+
               </ul>
               <ul className="lists2">
                 <li><a href="#company">Company</a></li>
@@ -218,10 +208,6 @@ function App() {
               </ul>
             </div>
           </div>
-
-
-
-
         </footer>
 
       </div>
