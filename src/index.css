@@ -530,7 +530,7 @@ footer ul {
   }
 
   body.lock {
-    overflow: hidden;
+     overflow: hidden; /*how to make it work */
   }
 
   .header_body {
@@ -617,12 +617,16 @@ footer ul {
   }
 
   .header_list .btn {
-    width: 30%;
+    width: 35%;
     height: 50px;
   }
 
   .header_list li {
     font-size: 20px;
+  }
+
+  .header_list a {
+    color: #fff;
   }
 }
 
