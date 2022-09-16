@@ -4,7 +4,9 @@ import Description from './Description/Description';
 import Card from './Card/Card.js'
 import Comment from './Comment/Comment.js'
 import BlogCard from './BlogCards/BlogCard.js'
+import Modal from './Modal/Modal';
 import React, { Component } from 'react';
+import {useState} from 'react';
 
 
 
@@ -12,6 +14,7 @@ import React, { Component } from 'react';
 
 
 function App() {
+  const [modalActive, setModalActive] = useState(false)
   return (
     <div className="App">
       <div className="wrapper">
@@ -31,10 +34,10 @@ function App() {
                   <li><a href="#product" className="nav-link">Product</a></li>
                   <li><a href="#services" className="nav-link">Services</a></li>
                   <li><a href="#help" className="nav-link">About</a></li>
-                  <button className="btn btn-basic nav-link">
+                  <button className="btn btn-basic nav-link" onClick={() => setModalActive(true)} >
                     Log in
                   </button>
-                </ul>
+                </ul> 
               </nav>
             </div>
           </div>
@@ -209,6 +212,13 @@ function App() {
             </div>
           </div>
         </footer>
+
+        <Modal active={modalActive} setActive={setModalActive}>
+          Username<br/>Password<br/>login_button
+
+        </Modal>
+
+
 
       </div>
     </div>
