@@ -1,22 +1,22 @@
 .btn {
-    
+
     font-family: var(--secondary-text);
     cursor: pointer;
     border: 2px solid #0A2640;
     font-weight: 700;
-    font-size: 1.2rem; 
-  }
-  
-  .btn-dark {
+    font-size: 1.2rem;
+}
+
+.btn-dark {
     background: #0A2640;
     color: #fff;
-  }
-  
-  .btn-basic {
+}
+
+.btn-basic {
     background-color: #fff;
     color: #0A2640;
     border: 2px solid #0A2640;
-  }
+}
 
 .popup {
     position: fixed;
@@ -66,4 +66,31 @@
     padding: 15px 35px;
     width: 100%;
     margin-bottom: 1.5rem;
-  }
+}
+
+/* .formLogin {
+    margin-bottom: 1.5rem;
+} */
+
+.formLogin input {
+    text-align: center;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    padding: 28px 0;
+    background-color: #0A2640;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.formLogin input::placeholder {
+    color: #fff;
+}
+
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
+
+}
