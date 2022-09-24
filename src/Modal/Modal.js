@@ -5,25 +5,23 @@ const Modal = ({ active, setActive }) => {
   const [token, setToken] = useState();
   const [user, setUser] = useState(null);
   async function login() {
-    await fetch("/login", {
+    let loginResponse = await fetch("/login", {
       headers: {
         "Content-Type": "application/json",
       },
       method: "POST",
       body: JSON.stringify({ username: "admin", password: "admin" }),
     })
-      .then((res) => res.json())
-      .then((data) => {
-        setToken(data.token);
-      });
-    await fetch("/user/1", {
+    loginResponse = await loginResponse.json();
+    setToken(loginResponse.token);
+    let userResponse = await fetch("/user/1", {
       headers: {
         "Content-Type": "text/plain",
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${loginResponse.token}`,
       },
     })
-      .then((res) => res.json())
-      .then((data) => {setUser(data)});
+    userResponse = await userResponse.json();
+    setUser(userResponse.user);
   }
 
   return (
@@ -40,8 +38,28 @@ const Modal = ({ active, setActive }) => {
             <h1>Login</h1>
           </div>
           <div className="popup_fields">
-            <button className="btn btn-dark">Username</button>
-            <button className="btn btn-dark">Password</button>
+            <form className="formLogin">
+              <label for="fname"></label>
+              <input
+                type="text"
+                id="fname"
+                name="fname"
+                placeholder="Username"
+              />
+              <br></br>
+              <label for="pass"></label>
+              <input
+                className="pass_in"
+                type="password"
+                name="password"
+                placeholder="Password"
+                minLength={8}
+                required
+              />
+            </form>
+
+            {user?.username}
+
             <button className="btn btn-basic" onClick={() => login()}>
               Login
             </button>

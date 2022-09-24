@@ -5,7 +5,7 @@ import Card from './Card/Card.js'
 import Comment from './Comment/Comment.js'
 import BlogCard from './BlogCards/BlogCard.js'
 import Modal from './Modal/Modal';
-import React, { Component } from 'react';
+import React from 'react';
 import {useState} from 'react';
 
 
@@ -15,6 +15,7 @@ import {useState} from 'react';
 
 function App() {
   const [modalActive, setModalActive] = useState(false)
+  
   return (
     <div className="App">
       <div className="wrapper">

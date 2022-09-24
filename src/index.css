@@ -29,7 +29,7 @@ body {
 .enterprise,
 .help,
 .blog {
-  min-height: fit-content;
+  min-height: 100vh;
 }
 
 header {
@@ -37,7 +37,8 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 40%;
+  height: 30%;
+  min-height: 12rem;
   z-index: 50;
   padding: 1rem 8rem 1rem 8rem;
 }
@@ -313,7 +314,8 @@ h3 {
 }
 
 .top-ent {
-  width: 90%
+  width: 90%;
+  text-align: center;
 }
 
 .btns {
@@ -391,14 +393,18 @@ h3 {
   margin: 4rem 0;
 }
 
-input {
+ input {
   border-radius: 22px;
   margin: 0;
   width: fit-content;
   border: 0;
   width: 300px;
   height: 2.7rem;
+}
+
+.email input {
   padding-left: 2rem;
+
 }
 
 input::placeholder {
@@ -410,9 +416,8 @@ input::placeholder {
   margin-top: 3rem;
 }
 
-form {
+.email form {
   margin-right: 1rem;
-  ;
 }
 
 .container {
@@ -611,10 +616,10 @@ footer ul {
   .header_list {
     display: block;
   }
-
+/* 
   .header_list li {
     margin: 0 0 20px 0;
-  }
+  } */
 
   .header_list .btn {
     width: 35%;
@@ -624,6 +629,9 @@ footer ul {
   .header_list li {
     font-size: 20px;
   }
+
+
+
 
   .header_list a {
     color: #fff;
