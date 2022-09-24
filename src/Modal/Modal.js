@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import "./Modal.css";
 
-const Modal = ({ active, setActive }) => {
-  const [token, setToken] = useState();
-  const [user, setUser] = useState(null);
+const Modal = ({ active, setActive, handleLogin }) => {
+  let token, username = null;
   async function login() {
     let loginResponse = await fetch("/login", {
       headers: {
@@ -13,15 +12,16 @@ const Modal = ({ active, setActive }) => {
       body: JSON.stringify({ username: "admin", password: "admin" }),
     })
     loginResponse = await loginResponse.json();
-    setToken(loginResponse.token);
+    token = loginResponse.token;
     let userResponse = await fetch("/user/1", {
       headers: {
         "Content-Type": "text/plain",
-        Authorization: `Bearer ${loginResponse.token}`,
+        Authorization: `Bearer ${token}`,
       },
     })
     userResponse = await userResponse.json();
-    setUser(userResponse.user);
+    username = userResponse.user.username;
+    handleLogin(userResponse.user.username);
   }
 
   return (
@@ -58,7 +58,7 @@ const Modal = ({ active, setActive }) => {
               />
             </form>
 
-            {user?.username}
+            {username}
 
             <button className="btn btn-basic" onClick={() => login()}>
               Login

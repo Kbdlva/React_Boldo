@@ -15,6 +15,12 @@ import {useState} from 'react';
 
 function App() {
   const [modalActive, setModalActive] = useState(false)
+  const [username, setUsername] = useState('');
+
+  const handleLogin = (data) => {
+    setUsername(data);
+    console.log('Login is handled', username);
+  }
   
   return (
     <div className="App">
@@ -35,9 +41,11 @@ function App() {
                   <li><a href="#product" className="nav-link">Product</a></li>
                   <li><a href="#services" className="nav-link">Services</a></li>
                   <li><a href="#help" className="nav-link">About</a></li>
+                  {username ? <span>{username}</span> : 
                   <button className="btn btn-basic nav-link" onClick={() => setModalActive(true)} >
                     Log in
                   </button>
+                  }
                 </ul> 
               </nav>
             </div>
@@ -214,7 +222,7 @@ function App() {
           </div>
         </footer>
 
-        <Modal active={modalActive} setActive={setModalActive}>
+        <Modal active={modalActive} setActive={setModalActive} handleLogin={handleLogin}>
           Username<br/>Password<br/>login_button
 
         </Modal>
