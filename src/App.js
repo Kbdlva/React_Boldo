@@ -6,7 +6,7 @@ import Comment from './Comment/Comment.js'
 import BlogCard from './BlogCards/BlogCard.js'
 import Modal from './Modal/Modal';
 import React from 'react';
-import {useState} from 'react';
+import { useState } from 'react';
 
 
 
@@ -15,7 +15,12 @@ import {useState} from 'react';
 
 function App() {
   const [modalActive, setModalActive] = useState(false)
-  
+  const [userName, setUserName] = useState('')
+
+  const handleLogin = (data) => {
+    setUserName(data);
+  }
+
   return (
     <div className="App">
       <div className="wrapper">
@@ -35,10 +40,14 @@ function App() {
                   <li><a href="#product" className="nav-link">Product</a></li>
                   <li><a href="#services" className="nav-link">Services</a></li>
                   <li><a href="#help" className="nav-link">About</a></li>
-                  <button className="btn btn-basic nav-link" onClick={() => setModalActive(true)} >
-                    Log in
-                  </button>
-                </ul> 
+
+                  {userName ? <h3 className='user_name'>{ userName } </h3>:
+                    <button className="btn btn-basic nav-link" onClick={() => setModalActive(true)} >
+                      Log in
+                    </button>
+                  }
+
+                </ul>
               </nav>
             </div>
           </div>
@@ -174,7 +183,7 @@ function App() {
           <h1>An enterprise template to ramp up your company website</h1>
           <div className="email">
             <form>
-              <label for="email"></label>
+              <label htmlFor="email"></label>
               <input type="email" id="email" name="email" placeholder="Your email" />
             </form>
             <button className="btn btn-green">Start now</button>
@@ -214,8 +223,8 @@ function App() {
           </div>
         </footer>
 
-        <Modal active={modalActive} setActive={setModalActive}>
-          Username<br/>Password<br/>login_button
+        <Modal active={modalActive} setActive={setModalActive} handleLogin={handleLogin}>
+          Username<br />Password<br />login_button
 
         </Modal>
 
