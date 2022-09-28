@@ -22,7 +22,7 @@ function App() {
   };
 
   return (
-    <UserContext.Provider value={{ username: "test" }}>
+    <UserContext.Provider value={{username}}>
       <Router>
         <Routes>
           <Route
