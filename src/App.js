@@ -19,7 +19,7 @@ function App() {
 
   const handleLogin = (data) => {
     setUsername(data);
-    console.log('Login is handled', username);
+    // -- username = admin
   }
   
   return (

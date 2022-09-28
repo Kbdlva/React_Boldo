@@ -21,7 +21,7 @@ const Modal = ({ active, setActive, handleLogin }) => {
     })
     userResponse = await userResponse.json();
     username = userResponse.user.username;
-    handleLogin(userResponse.user.username);
+    handleLogin(username);
   }
 
   return (
