@@ -1,0 +1,16 @@
+
+@media (max-width: 1300px) {
+  .blogImage {
+    width: 80%;
+  }
+  .blgCard {
+    margin-bottom: 4rem;
+}
+}
+
+@media (max-width: 850px) {
+    .blogImage {
+        width: 70%;
+        min-width: 200px;
+    }
+  }

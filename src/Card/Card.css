@@ -1,4 +1,4 @@
-.cardImg {
+.card img {
     width: 80%;
 }
 
@@ -6,5 +6,11 @@
     .cards {
         display: flex;
         flex-direction: column;
+    }
+  }
+
+  @media (max-width: 850px) {
+    .card img {
+        width: 70%;
     }
   }
