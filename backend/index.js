@@ -12,6 +12,9 @@ const usersList = [
     id: 1,
     username: "admin",
     password: "admin",
+    name: "admin",
+    surname: "admin",
+    avatarUrl: "http://localhost:8000/avatar.png",
   }
 ]
 
@@ -66,6 +69,23 @@ app.get("/user/:id", authenticateJWT, (req, res) => {
   const user = usersList.find((user) => user.id === +req.params.id);
   if (user) {
     return res.json({user})
+  }
+
+  return res
+    .status(404)
+    .json({ message: "No such user"})
+})
+
+app.patch("/user/:id", authenticateJWT, (req, res) => {
+  const index = usersList.findIndex((user) => user.id === +req.params.id);
+  let user = usersList[index];
+
+  if (user) {
+    user = {
+      ...user,
+      ...req.body,
+    }
+    return res.json(user)
   }
 
   return res
