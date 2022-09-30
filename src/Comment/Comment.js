@@ -3,11 +3,11 @@ import './Comment.css'
 function Comment(props){
     return(
         <div className="com">
-        <div class="avatar">
+        <div className="avatar">
           <h3>{props.com}</h3>
-          <div class="author">
+          <div className="author">
             <img src={props.authorPick} alt=""/>
-              <div class="person">
+              <div className="person">
                 <p>{props.name}</p>
                 <p>{props.status}</p>
               </div>

@@ -7,7 +7,7 @@ function Card(props) {
      <img src={props.image} alt={props.alt}/>
       <p>{props.featureName} feature </p>
   
-    <p>Explore page <i class="fa fa-arrow-right"></i></p>
+    <p>Explore page <i className="fa fa-arrow-right"></i></p>
   
     </div>
     );

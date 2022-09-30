@@ -1,15 +1,19 @@
 import { useContext } from "react";
 import { UserContext } from "../App";
+import './Profile.css'
 
-// use react context
 const Profile = (props) => {
-    const userContext = useContext(UserContext);
-    console.log(userContext);
+    const {user} = useContext(UserContext);
     return (
         <>
-            <div>Profile</div>
-            {userContext.username}
-        </>
+        <div className="Prof">
+            <div className="wrapper">
+            {user.username}
+            {user.name}
+            </div>
+            Profile</div>
+            
+            </>
     )
 }
 
