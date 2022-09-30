@@ -7,26 +7,29 @@ import BlogCard from './BlogCards/BlogCard.js'
 import Modal from './Modal/Modal';
 import FooterList from './FooterLIst/FooterList.js'
 import Profile from './Profile/Profile.js'
-import One from './PageOne/PageOne.js'
+import One from './Pages/One.js'
+import Six from './Pages/Six.js'
+import Eight from './Pages/Eight'
 import React, { useState, createContext } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 export const UserContext = createContext({});
 
-
 function App() {
   const [modalActive, setModalActive] = useState(false)
-  const [userName, setUserName] = useState('')
+  const [user, setUser] = useState({})
 
   const handleLogin = (data) => {
-    setUserName(data);
+    setUser(data);
+
+    console.log(user.userName)
   }
 
   return (
-    <UserContext.Provider value={{ username: "admin" }}>
+    <UserContext.Provider value={{ user }}>
       <Router>
         <Routes>
-        <Route path="/profile/:id" element={<Profile />}></Route>
+          <Route path="/profile/:id" element={<Profile />}></Route>
           <Route path='/' element={
             <>
               <div className="App">
@@ -46,14 +49,12 @@ function App() {
                           <ul className="header_list">
                             <li><a href="#product" className="nav-link">Product</a></li>
                             <li><a href="#services" className="nav-link">Services</a></li>
-                            {/* <li><a href="#help" className="nav-link">About</a></li> */}
+                            <li><a href="#help" className="nav-link">About</a></li>
 
-                            <Link to='/profile/1/'>About</Link>
+                            {user.userName ? <div className='user_name'>
+                            <Link to='/profile/1/'>{user.userName}</Link>
 
-                            {userName ? <div className='user_name'>
-                              
-                              {userName} 
-                              </div> :
+                            </div> :
                               <button className="btn btn-basic nav-link" onClick={() => setModalActive(true)} >
                                 Log in
                               </button>
@@ -65,10 +66,9 @@ function App() {
                   </header>
 
                   <div className="hero light-them">
-                    <One/>
+                    <One />
                     <img src=".\images\Logos_bottom_p1.png" className="logos" alt="logos" />
                   </div>
-
 
                   <div id="services" className="services dark-them">
                     <p>Our services</p>
@@ -114,7 +114,6 @@ function App() {
                     </div>
                   </div>
 
-
                   <div id="product" className="enterprise dark-them">
                     <div className="top-ent">
                       <h1>An enterprise template to ramp up your company website</h1>
@@ -127,28 +126,16 @@ function App() {
                     <div className="comments">
 
                       <Comment com="Buyer buzz partner network disruptive non-disclosure agreement business" authorPick=".\images\Albus_p5.png" name="Albus Dumbledore" status="Manager @Howarts" />
-
                       <Comment com="Learning curve infrastucture value proposition advisor strategy user experience
                                 hepotheses investor" authorPick=".\images\Severus_p5.png" name="Severus Snape" status="Manager @Slytherin" />
                       <div className='commentNum3'>
-
                         <Comment com="Release facebook responsive web desighn businnes model canvas seed money monetization." authorPick=".\images\Albus_p5.png" name="Harry Potter" status="Team Leader @Gryffindor" />
                       </div>
-
                     </div>
                   </div>
 
                   <div id="help" className="help">
-                    <img src=".\images\help_p6.png" alt="" />
-                    <div className="text">
-                      <h1>We connect our customers with the best, and help them keep up and syat open.</h1>
-                      <div className="questions">
-                        <p>We connect our customers with the best?</p>
-                        <hr />
-                        <p>Android research & development rockstar?</p>
-                        <hr />
-                      </div>
-                    </div>
+                    <Six />
                   </div>
 
                   <div id="blog" className="blog light-them">
@@ -168,14 +155,7 @@ function App() {
                   </div>
 
                   <div id="resourses" className="last dark-them">
-                    <h1>An enterprise template to ramp up your company website</h1>
-                    <div className="email">
-                      <form>
-                        <label htmlFor="email"></label>
-                        <input type="email" id="email" name="email" placeholder="Your email" />
-                      </form>
-                      <button className="btn btn-green">Start now</button>
-                    </div>
+                    <Eight />
                   </div>
 
                   <footer>
@@ -195,13 +175,8 @@ function App() {
                   <Modal active={modalActive} setActive={setModalActive} handleLogin={handleLogin}>
                     Username<br />Password<br />login_button
                   </Modal>
-
-
-
                 </div>
               </div>
-
-
             </>
           }
           ></Route>

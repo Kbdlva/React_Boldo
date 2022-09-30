@@ -1,3 +1,5 @@
+import './FooterList.css'
+
 function FooterList (props) {
     return (
         <div className="rightContent" >

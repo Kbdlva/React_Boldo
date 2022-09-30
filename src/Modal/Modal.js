@@ -4,7 +4,7 @@ import "./Modal.css"
 // import { useState } from "react";
 
 const Modal = ({ active, setActive, handleLogin }) => {
-    let token, userName = null;
+    let token, user = null;
 
     async function login() {
         let loginResponse = await fetch("/login", {
@@ -23,8 +23,8 @@ const Modal = ({ active, setActive, handleLogin }) => {
             },
         })
         userResponse = await userResponse.json();
-        userName = userResponse.user.username;
-        handleLogin(userName);
+        user = userResponse.user;
+        handleLogin(user);
 
     }
     return (

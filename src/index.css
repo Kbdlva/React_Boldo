@@ -436,10 +436,11 @@ footer .leftCont {
   color: lightgray;
 }
 
-footer .rightCont {
+/* footer .rightCont {
   display: flex;
   flex-direction: row;
-}
+  background-color: aqua;
+} */
 
 footer ul li:first-child {
   font-weight: bold;
@@ -634,9 +635,6 @@ footer ul {
   .header_list li {
     font-size: 20px;
   }
-
-
-
 
   .header_list a {
     color: #fff;

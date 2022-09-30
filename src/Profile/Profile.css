@@ -1,0 +1,44 @@
+.Prof {
+    overflow:hidden;
+    
+}
+
+.Prof header::before {
+    background-color: transparent
+}
+
+.Prof header {
+    position: relative;
+    padding: 3rem 8rem 1rem 8rem;
+}
+
+.Prof header li {
+    padding: 0;
+}
+
+.Prof header a {
+    color:  #0A2640;
+    font-weight: 600;
+}
+
+.title {
+    text-align: center;
+}
+
+.saveEdit .btn {
+    width: 200px;
+    font-weight: 400;
+    margin: 2rem 2rem 0 0 ;
+}
+
+.circle {
+    position: absolute;
+    width: 1200px;
+    height: 1200px;
+    background-color: #F1F1F1;
+    border: 2px solid #F1F1F1;
+    border-radius: 50%;
+    top: -45rem;
+    right: -38rem;
+    
+}
