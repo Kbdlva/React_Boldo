@@ -13,11 +13,6 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 export const UserContext = createContext({});
 
-  const handleLogin = (data) => {
-    setUsername(data);
-    // -- username = admin
-  };
-
 function App() {
   const [modalActive, setModalActive] = useState(false)
   const [user, setUser] = useState({})
