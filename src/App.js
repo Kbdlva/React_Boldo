@@ -16,14 +16,14 @@ export const UserContext = createContext({});
 
 function App() {
   const [modalActive, setModalActive] = useState(false)
-  const [userName, setUserName] = useState('')
+  const [user, setUser] = useState({})
 
   const handleLogin = (data) => {
-    setUserName(data);
+    setUser(data);
   }
 
   return (
-    <UserContext.Provider value={{ username: "admin" }}>
+    <UserContext.Provider value={{ user }}>
       <Router>
         <Routes>
         <Route path="/profile/:id" element={<Profile />}></Route>
@@ -50,9 +50,9 @@ function App() {
 
                             <Link to='/profile/1/'>About</Link>
 
-                            {userName ? <div className='user_name'>
+                            {user.username ? <div className='user_name'>
                               
-                              {userName} 
+                              {user.username} 
                               </div> :
                               <button className="btn btn-basic nav-link" onClick={() => setModalActive(true)} >
                                 Log in

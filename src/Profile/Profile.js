@@ -3,13 +3,13 @@ import { UserContext } from "../App";
 import './Profile.css'
 
 const Profile = (props) => {
-    const cont = useContext(UserContext);
-    console.log(UserContext.username);
+    const {user} = useContext(UserContext);
     return (
         <>
         <div className="Prof">
             <div className="wrapper">
-            {UserContext.username}
+            {user.username}
+            {user.name}
             </div>
             Profile</div>
             
