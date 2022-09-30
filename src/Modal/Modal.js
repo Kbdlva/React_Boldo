@@ -1,3 +1,4 @@
+
 import React from "react";
 import "./Modal.css"
 // import { useState } from "react";
@@ -26,13 +27,6 @@ const Modal = ({ active, setActive, handleLogin }) => {
         handleLogin(userName);
 
     }
-
-    //1 request to login 
-    // get token and save it
-    // request /user/1
-    // get user data and save it
-    // display in header 
-
     return (
         <div className={active ? "popup active" : "popup"} onClick={() => setActive(false)}>
             <div className='popup_body' >
@@ -58,5 +52,6 @@ const Modal = ({ active, setActive, handleLogin }) => {
         </div>
     )
 }
+
 
 export default Modal;
