@@ -1,6 +1,6 @@
 .Prof {
+    max-width: 100vw;;
     overflow:hidden;
-    
 }
 
 .Prof header::before {
@@ -31,6 +31,10 @@
     margin: 2rem 2rem 0 0 ;
 }
 
+.aboutUser {
+    color:#0A2640;
+}
+
 .circle {
     position: absolute;
     width: 1200px;
@@ -39,6 +43,34 @@
     border: 2px solid #F1F1F1;
     border-radius: 50%;
     top: -45rem;
-    right: -38rem;
-    
+    right: -38rem;    
+}
+
+.editForm input {
+    text-align: center;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border: 2px solid  #0A2640;;
+    border-radius: 30px;
+    padding: 20px 0;
+    margin-bottom: 1.5rem;
+    color:  #0A2640;;
+}
+
+.editForm {
+    display: none;
+}
+
+.labels {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 0 0;
+}
+
+.labels label {
+    padding: 8px 0 37px 0;
+    font-weight: 700;
+    font-size: 18px;
+    color: #0A2640;
 }

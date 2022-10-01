@@ -21,12 +21,10 @@ function App() {
 
   const handleLogin = (data) => {
     setUser(data);
-
-    console.log(user.userName)
   }
 
   return (
-    <UserContext.Provider value={{ user }}>
+    <UserContext.Provider value={{ user, setUser }}>
       <Router>
         <Routes>
           <Route path="/profile/:id" element={<Profile />}></Route>
@@ -51,8 +49,8 @@ function App() {
                             <li><a href="#services" className="nav-link">Services</a></li>
                             <li><a href="#help" className="nav-link">About</a></li>
 
-                            {user.userName ? <div className='user_name'>
-                            <Link to='/profile/1/'>{user.userName}</Link>
+                            {user.username ? <div className='user_name'>
+                            <Link to='/profile/1/'>{user.username}</Link>
 
                             </div> :
                               <button className="btn btn-basic nav-link" onClick={() => setModalActive(true)} >
