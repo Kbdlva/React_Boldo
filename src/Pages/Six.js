@@ -12,9 +12,7 @@ function Six(props) {
                 </div>
             </div>
         </div>
-
     );
 }
-
 export default Six;
 

@@ -14,25 +14,45 @@ const Modal = ({ active, setActive, handleLogin }) => {
         localStorage.setItem('is_password', passInput)
         console.log(localStorage.getItem('is_name'))
 
-        let loginResponse = await fetch("/login", {
+        // let loginResponse = await fetch("/login", {
+        //     headers: {
+        //         "Content-Type": "application/json",
+        //     },
+        //     method: "POST",
+        //     body: JSON.stringify({ username: "admin", password: "admin" }),
+        // })
+        // loginResponse = await loginResponse.json();
+        // token = loginResponse.token;
+        // localStorage.setItem('token', token);
+        // let userResponse = await fetch("/user/1", {
+        //     headers: {
+        //         "Content-Type": "text/plain",
+        //         Authorization: `Bearer ${token}`,
+        //     },
+        // })
+        // userResponse = await userResponse.json();
+        // user = userResponse.user;
+        // handleLogin(user);
+
+
+        fetch("/login", {
             headers: {
                 "Content-Type": "application/json",
             },
             method: "POST",
-            body: JSON.stringify({ username: "admin", password: "admin" }),
+            body: JSON.stringify({ username: "admin", password: "admin" })
+        }).then(loginResponse => {
+            loginResponse.json()
+            token = loginResponse.token;
+            localStorage.setItem('token', token);
+            return loginResponse
+        }).then(userResponse => {
+            user = userResponse.user;
+            handleLogin(user);
+            
+        }).catch(err => {
+            console.log(err)
         })
-        loginResponse = await loginResponse.json();
-        token = loginResponse.token;
-        localStorage.setItem('token', token);
-        let userResponse = await fetch("/user/1", {
-            headers: {
-                "Content-Type": "text/plain",
-                Authorization: `Bearer ${token}`,
-            },
-        })
-        userResponse = await userResponse.json();
-        user = userResponse.user;
-        handleLogin(user);
 
     }
     return (
