@@ -139,7 +139,6 @@ a {
 
 .content .left {
   margin-right: 3rem;
-  ;
 }
 
 .btn-dark {
@@ -409,7 +408,6 @@ a {
 
 .email input {
   padding-left: 2rem;
-
 }
 
 input::placeholder {
@@ -436,12 +434,6 @@ footer .leftCont {
   color: lightgray;
 }
 
-/* footer .rightCont {
-  display: flex;
-  flex-direction: row;
-  background-color: aqua;
-} */
-
 footer ul li:first-child {
   font-weight: bold;
 }
@@ -464,11 +456,9 @@ footer ul {
   .services h1 {
     width: 80%
   }
-
 }
 
 @media (max-width: 767px) {
-
   .servicesCard {
     display: none;
   }
@@ -622,10 +612,6 @@ footer ul {
   .header_list {
     display: block;
   }
-/* 
-  .header_list li {
-    margin: 0 0 20px 0;
-  } */
 
   .header_list .btn {
     width: 35%;
@@ -761,7 +747,6 @@ footer ul {
 }
 
 @media (max-width: 1180px) {
-
   .customer1,
   .customer2 {
     min-height: 40rem;
@@ -823,12 +808,9 @@ footer ul {
 }
 
 @media (max-width: 1500px) {
-
   .services,
   .enterprise {
     padding: 10%;
     text-align: center;
   }
 }
-
-

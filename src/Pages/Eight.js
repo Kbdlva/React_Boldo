@@ -1,4 +1,3 @@
-
 function Eight(props) {
     return (
         <div>
@@ -10,10 +9,7 @@ function Eight(props) {
                 </form>
                 <button className="btn btn-green">Start now</button>
             </div>
-
-
         </div>
-
     );
 }
 
